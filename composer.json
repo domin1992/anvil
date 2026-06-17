@@ -8,6 +8,9 @@
             "Anvil\\": "src/"
         }
     },
+    "files": [
+      "src/Misc/helpers.php"
+    ],
     "authors": [
         {
             "name": "Dominik Nowak",
