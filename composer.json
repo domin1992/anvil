@@ -1,0 +1,29 @@
+{
+    "name": "domin1992/anvil",
+    "description": "Composer package for Wordpress custom theme",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Anvil\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dominik Nowak",
+            "email": "hello@dominiknowak.dev"
+        }
+    ],
+    "require": {
+        "php": ">=8.3",
+        "enshrined/svg-sanitize": "^0.21",
+        "dragonmantank/cron-expression": "^3.4",
+        "symfony/dotenv": "^7.2",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.2.3",
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "php-stubs/wordpress-stubs": "^7.0",
+        "php-stubs/acf-pro-stubs": "^6.8"
+    }
+}

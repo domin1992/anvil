@@ -1,0 +1,42 @@
+<?php
+
+namespace App\Actions;
+
+use Anvil\Actions\Action;
+
+/**
+ * DummyActionClass
+ */
+class DummyActionClass extends Action
+{
+	/**
+	 * Hook name
+	 *
+	 * @var string
+	 */
+	public $hookDummyHookName;
+
+	/**
+	 * Priority
+	 *
+	 * @var int
+	 */
+	public $priority = 10;
+
+	/**
+	 * Accepted Arguments
+	 *
+	 * @var int
+	 */
+	public $accepted_args = 1;
+
+	/**
+	 * Handles hook function
+	 *
+	 * @return mixed
+	 */
+	public function handle()
+	{
+		//
+	}
+}

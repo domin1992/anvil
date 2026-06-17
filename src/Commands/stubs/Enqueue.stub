@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Enqueue;
+
+/**
+ * DummyEnqueueClass
+ */
+class DummyEnqueueClass extends Enqueue {
+
+	/**
+	 * Handle
+	 *
+	 * @return void
+	 */
+	public function handle() {
+		/**
+		 * Styles
+		 */
+		$this->enqueueViteAsset( 'style', 'DummyEnqueueSlug-styles', 'dist/DummyEnqueueSnake.css' );
+
+		/**
+		 * Scripts
+		 */
+		$this->enqueueViteAsset( 'script', 'DummyEnqueueSlug-scripts', 'dist/DummyEnqueueSnake.bundle.js' );
+	}
+}

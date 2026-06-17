@@ -1,0 +1,41 @@
+<?php
+
+namespace App\Filters;
+
+use Anvil\Filters\Filter;
+
+/**
+ * DummyFilterClass
+ */
+class DummyFilterClass extends Filter {
+
+	/**
+	 * Hook name
+	 *
+	 * @var string|array
+	 */
+	public $hookDummyHookName;
+	
+	/**
+	 * Priority
+	 *
+	 * @var int
+	 */
+	public $priority = 10;
+	
+	/**
+	 * Accepted Arguments
+	 *
+	 * @var int
+	 */
+	public $accepted_args = 1;
+	
+	/**
+	 * Handles hook function
+	 *
+	 * @return mixed
+	 */
+	public function handle() {
+		//
+	}
+}

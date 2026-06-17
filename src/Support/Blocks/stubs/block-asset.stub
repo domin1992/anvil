@@ -1,0 +1,7 @@
+<?php
+
+return array(
+    'handle'       => 'DummyBlockSlug-js',
+    'dependencies' => array(''),
+    'version'      => '1.0',
+);

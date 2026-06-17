@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * DummyBlockName Block Template.
+ *
+ * @param   array $block The block settings and attributes.
+ * @param   string $content The block inner HTML (empty).
+ * @param   bool $is_preview True during AJAX preview.
+ * @param   (int|string) $post_id The post ID this block is saved to.
+ */
+
+// Create id attribute allowing for custom "anchor" value.
+$id = 'acf-block-DummyBlockSlug-' . $block['id'];
+if ( ! empty($block['anchor'] ) ) {
+    $id = $block['anchor'];
+}
+
+// Create class attribute allowing for custom "className" values.
+$class_name = 'acf-block-DummyBlockSlug';
+$additional_class = ! empty( $block['className'] ) ? ' ' . $block['className'] : null;
+
+// Load values and assign defaults.
+
+$margin_top = get_field( 'margin_top' );
+$margin_bottom = get_field( 'margin_bottom' );
+$padding_top = get_field( 'padding_top' );
+$padding_bottom = get_field( 'padding_bottom' );
+
+$main_tag = isset( $title ) && $title ? 'section' : 'div';
+
+// block preview
+if ( ! empty( $block['data']['__is_preview'] ) ) : ?>
+<img src="<?= get_template_directory_uri(); ?>/block-previews/<?= $class_name; ?>.jpg" />
+
+<?php return;
+endif; ?>
+
+<?php
+/**
+ * Begin Custom Block
+ */
+do_action( 'container_start' );
+?>
+
+<<?= $main_tag; ?> id="<?= esc_attr( $id ); ?>" class="<?= esc_attr( $class_name ) . $additional_class; ?><?php if ( $margin_top ) echo ' c-mt-' . $margin_top; ?><?php if ( $margin_bottom ) echo ' c-mb-' . $margin_bottom; ?><?php if ( $padding_top ) echo ' c-pt-' . $padding_top; ?><?php if ( $padding_bottom ) echo ' c-pb-' . $padding_bottom; ?>" data-anim="fade-in">
+
+    <!-- Your content -->
+
+</<?= $main_tag; ?>>
+
+<?php
+/**
+ * End Custom Block
+ */
+do_action( 'container_end' );
+?>

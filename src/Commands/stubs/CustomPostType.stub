@@ -1,0 +1,37 @@
+<?php
+
+namespace App\CustomPostTypes;
+
+use Anvil\CustomPostTypes\CustomPostType;
+
+/**
+ * DummyCustomPostTypeName
+ */
+class DummyCustomPostTypeName extends CustomPostType {
+
+	/**
+	 * Slug
+	 *
+	 * @var string
+	 */
+	public $slug = 'DummyCustomPostTypeSlug';
+
+	/**
+	 * Config
+	 *
+	 * @return array
+	 */
+	public function config() {
+		return array(
+			'labels'           => array(
+				'name'          => __( 'DummyCustomPostTypeName' ),
+				'singular_name' => __( 'DummyCustomPostTypeSingular' ),
+			),
+			'public'           => true,
+			'public_queryable' => false,
+			'has_archive'      => false,
+			'show_in_rest'     => false,
+			'menu_icon'        => 'DummyCustomPostTypeIcon',
+		);
+	}
+}
