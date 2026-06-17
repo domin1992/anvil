@@ -6,11 +6,11 @@
     "autoload": {
         "psr-4": {
             "Anvil\\": "src/"
-        }
+        },
+        "files": [
+            "src/Misc/helpers.php"
+        ]
     },
-    "files": [
-      "src/Misc/helpers.php"
-    ],
     "authors": [
         {
             "name": "Dominik Nowak",
