@@ -2,6 +2,7 @@
     "name": "domin1992/anvil",
     "description": "Composer package for Wordpress custom theme",
     "type": "library",
+    "license": "GPL-2.0-or-later",
     "autoload": {
         "psr-4": {
             "Anvil\\": "src/"
