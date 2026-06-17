@@ -2,9 +2,9 @@
 
 namespace Anvil\Providers;
 
+use Anvil\Enqueue\Enqueue;
 use Anvil\Support\Discovery;
 use Anvil\Support\ViteHelper;
-use App\Enqueue\Enqueue;
 
 class EnqueueAssetsProvider implements Provider
 {
