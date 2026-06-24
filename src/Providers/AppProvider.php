@@ -10,6 +10,7 @@ class AppProvider
     public static ?AppProvider $instance = null;
 
     protected array $providers = [
+        \Anvil\Providers\SentryProvider::class,
         \Anvil\Providers\FiltersProvider::class,
         \Anvil\Providers\ActionsProvider::class,
         \Anvil\Providers\RestApiProvider::class,
