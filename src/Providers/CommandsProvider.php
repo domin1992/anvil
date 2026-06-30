@@ -2,6 +2,7 @@
 
 namespace Anvil\Providers;
 
+use Anvil\Commands\DbImportCommand;
 use Anvil\Commands\MakeCommand;
 
 class CommandsProvider implements Provider
@@ -13,6 +14,7 @@ class CommandsProvider implements Provider
      */
     protected array $commands = [
         MakeCommand::class,
+        DbImportCommand::class,
     ];
 
     public function boot(): void
