@@ -9,7 +9,7 @@ class RestApiRoute
     public static function make(
         string $method,
         string $endpoint,
-        Closure $callback,
+        array|Closure $callback,
         string $permission_callback = '__return_true'
     ): self {
         return new self(
@@ -23,7 +23,7 @@ class RestApiRoute
     public function __construct(
         public string $method,
         public string $endpoint,
-        public Closure $callback,
+        public array|Closure $callback,
         public string $permission_callback
     ) {
         //
