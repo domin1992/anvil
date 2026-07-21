@@ -89,7 +89,7 @@ class DbImportCommand
 
         \WP_CLI::log('Database imported successfully.');
 
-        \WP_CLI::log('Compressing media... (be patient, it\'s about 6GB)');
+        \WP_CLI::log('Compressing media...');
 
         try {
             $response = $client->post(
@@ -100,7 +100,7 @@ class DbImportCommand
             return;
         }
 
-        \WP_CLI::log('Downloading media zip file... (be patient, it\'s about 6GB)');
+        \WP_CLI::log('Downloading media zip file...');
 
         $this->wpFilesystem->put_contents(
             $mediaFile,
